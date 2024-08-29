@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Libros</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="autores.html">Autores</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Lista de Libros</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Fecha de Publicación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="libros-list">
+                    <!-- Los libros se cargarán aquí con JavaScript -->
+                </tbody>
+            </table>
+
+            <h2>Añadir Libro</h2>
+            <form id="add-book-form">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required>
+                <label for="fecha_publicacion">Fecha de Publicación:</label>
+                <input type="date" id="fecha_publicacion" name="fecha_publicacion" required>
+                <button type="submit">Añadir Libro</button>
+            </form>
+
+            <!-- Formulario de edición de libro -->
+            <h2>Editar Libro</h2>
+            <form id="edit-book-form" style="display: none;">
+                <input type="hidden" id="edit-id" name="id">
+                <label for="edit-titulo">Título:</label>
+                <input type="text" id="edit-titulo" name="titulo" required>
+                <label for="edit-autor">Autor:</label>
+                <input type="text" id="edit-autor" name="autor" required>
+                <label for="edit-fecha_publicacion">Fecha de Publicación:</label>
+                <input type="date" id="edit-fecha_publicacion" name="fecha_publicacion" required>
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" id="cancel-edit">Cancelar</button>
+            </form>
+        </section>
+        <script src="libros.js"></script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Autores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Autores</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="libros.html">Libros</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Lista de Autores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="autores-list">
+                    <!-- Los autores se cargarán aquí con JavaScript -->
+                </tbody>
+            </table>
+
+            <h2>Añadir Autor</h2>
+            <form id="add-author-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <button type="submit">Añadir Autor</button>
+            </form>
+
+            <!-- Formulario de edición de autor -->
+            <h2>Editar Autor</h2>
+            <form id="edit-author-form" style="display: none;">
+                <input type="hidden" id="edit-id" name="id">
+                <label for="edit-nombre">Nombre:</label>
+                <input type="text" id="edit-nombre" name="nombre" required>
+                <label for="edit-apellido">Apellido:</label>
+                <input type="text" id="edit-apellido" name="apellido" required>
+                <label for="edit-fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="edit-fecha_nacimiento" name="fecha_nacimiento" required>
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" id="cancel-edit">Cancelar</button>
+            </form>
+        </section>
+        <script src="autores.js"></script>
+    </main>
+</body>
+</html>
